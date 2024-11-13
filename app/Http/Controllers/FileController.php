@@ -11,7 +11,7 @@ class FileController extends Controller
         if ($request->hasFile('file')) {
             $file = $request->file('file');
             $filename = $file->getClientOriginalName(); // Lỗi: Không validate filename
-
+            // aaaaaa
             // Lỗi: Lưu trực tiếp vào storage mà không sanitize
             $file->move(storage_path('files'), $filename);
 
